@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      feedback: {
+        Row: {
+          analyzed_at: string | null
+          category: string | null
+          content: string
+          created_at: string
+          customer_name: string | null
+          id: string
+          sentiment: string | null
+          sentiment_score: number | null
+          source: string
+          suggested_action: string | null
+          summary: string | null
+          urgency: string | null
+          user_id: string
+        }
+        Insert: {
+          analyzed_at?: string | null
+          category?: string | null
+          content: string
+          created_at?: string
+          customer_name?: string | null
+          id?: string
+          sentiment?: string | null
+          sentiment_score?: number | null
+          source?: string
+          suggested_action?: string | null
+          summary?: string | null
+          urgency?: string | null
+          user_id?: string
+        }
+        Update: {
+          analyzed_at?: string | null
+          category?: string | null
+          content?: string
+          created_at?: string
+          customer_name?: string | null
+          id?: string
+          sentiment?: string | null
+          sentiment_score?: number | null
+          source?: string
+          suggested_action?: string | null
+          summary?: string | null
+          urgency?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
